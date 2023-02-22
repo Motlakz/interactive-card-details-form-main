@@ -1,0 +1,9 @@
+@import url("https://fonts.google.com/specimen/Space+Grotesk");
+* {
+    box-sizing: border-box;
+    font-family: 'Space Grotesque', 'Georgia', sans-serif;
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 0;
+}
+
