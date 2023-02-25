@@ -6,39 +6,116 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Interactive card details form</title>
+  <script src="https://kit.fontawesome.com/1dd55a644d.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<main class="container">
+  <header>
+    <section class="card-container">
+      <div class="card-front">
+        <div class="image">
+          <img src="./image/chip.png" alt="card chip">
+          <img src="./image/visa.png" alt="visa logo">
+        </div>
+        <div class="card-number">****************</div>
+        <div class="details">
+          <div class="box">
+            <span>CARD HOLDER</span>
+            <div class="cc-name">FULL NAME</div>
+          </div>
+          <div class="box">
+            <span>EXPIRES</span>
+            <div class="expiration">
+              <span class="exp-month">MM</span>
+              <span class="exp-year">YYYY</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
+      <div class="card-back">
+        <div class="stripe"></div>
+        <div class="box">
+          <span>CVV</span>
+          <div class="cvv-box"></div>
+          <img src="./image/visa.png" alt="visa logo">
+        </div>
+      </div>
+    </section>
+  </header>
   
+  <form action="" method="post"> 
+    <div class="col-50">
+      <h3>Payment</h3>
+      <legend>Accepted Payment Methods</legend>
+
+      <br>
+      <div class="icons">
+          <i class="fa fa-cc-visa" style="color:navy;"></i>
+          <i class="fa fa-cc-paypal" style="color:blue;"></i>
+          <i class="fa fa-cc-mastercard" style="color:red;"></i>
+          <i class="fa fa-cc-discover" style="color:orange;"></i>
+      </div>
+      <br>
+
+      <div class="inputBox">
+        <label for="cname">CARDHOLDER NAME</label>
+        <input type="text" id="cname" name="cardname" class="card-holder-input" placeholder="Jane K. Doe" required />
+      </div>  
+  
+      <div class="inputBox">
+        <label for="ccnum">CARD NUMBER</label>
+        <input type="text"id="ccnum" name="ccnumber" class="card-number-input" placeholder="2545-6985-2222-1234" maxlength="16" required />
+      </div>  
+      <div class="flexbox">
+        <div class="inputBox">
+          <label>EXPIRY MM</label>
+            <select name="" id="" class="month-input">
+              <option value="month" selected disabled>MONTH</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+        </div>
+        <div class="inputBox">
+          <label>EXPIRY YYYY</label>
+            <select class="year-input">
+              <option value="year" selected disabled>YEAR</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+            </select>
+        </div>
+        <div class="inputBox">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" class="cvv-input" placeholder="583" maxlength="3" required />
+        </div>
+      </div>
+      <button type="reset" class="clear">Reset</button>
+      <a href="./modal.html"><button type="button" class="button">Confirm</button></a>
+    </div>
+  </form>
+</main>
+  <script src="./script.js"></script>
   <footer class="footer">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Motlalepula Sello</a>.
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+    <p>Coded by <a href="#">&#10084;Motlalepula Sello&#10084;</a>.</p>
   </footer>
 </body>
 </html>
