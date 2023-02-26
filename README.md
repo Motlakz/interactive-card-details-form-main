@@ -28,8 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot of the Credit Checkout Form]("./assets/responsive-checkout-form.png")
-
+![responsive-checkout-form.png]
 
 ### Links
 
