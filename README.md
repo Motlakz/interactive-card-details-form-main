@@ -28,11 +28,11 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot of the Credit Checkout Form]("./https://imgur.com/a/0MnRYhq")
+![https://imgur.com/a/0MnRYhq]
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://motlakz.github.io/interactive-card-details-form-main)
+- Live Site URL: [https://motlakz.github.io/interactive-card-details-form-main]
 
 ## My process
 
