@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![responsive-checkout-form.png]
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/76655996/221414254-d4e319a9-3c5f-48ed-a5c1-44ffd23f33e2.png">
 
 ### Links
 
