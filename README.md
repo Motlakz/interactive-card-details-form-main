@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive card details form solution
 
-This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -14,7 +14,6 @@ This is a solution to the [Interactive card details form challenge on Frontend M
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -24,79 +23,87 @@ Users should be able to:
 
 - Fill in the form and see the card details update in real-time
 - Receive error messages when the form is submitted if:
-  - Any input field is empty
-  - The card number, expiry date, or CVC fields are in the wrong format
 - View the optimal layout depending on their device's screen size
 - See hover, active, and focus states for interactive elements on the page
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![image.png](./screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://motlakz.github.io/interactive-card-details-form-main)
 
 ## My process
+
+- used the box model and semantic elements to position items on the page based on their respective viewports
+- adapted the mobile-first approach to style each element
+- applied styling and added a couple card components with respect to the given design and viewport sizes
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
+- CSS Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Pure JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- I learned to add different payment options using icons from FontAwesome.
+- How to create a vanishing view of one side of a card.
+- How to reveal form inputs on the card as you type them in.
 
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="icons">
+  <i class="fa fa-cc-visa" style="color:navy;"></i>
+  <i class="fa fa-cc-paypal" style="color:blue;"></i>
+  <i class="fa fa-cc-mastercard" style="color:red;"></i>
+  <i class="fa fa-cc-discover" style="color:orange;"></i>
+</div>
 ```
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.container .card-container .card-back{
+    position: relative;
+    height: 50%;
+    width: 20vw;
+    top: 0;
+    background:linear-gradient(45deg, rgb(115, 107, 122), rgb(160, 62, 114));
+    border-radius: 8px;
+    padding-top: 20px;
+    margin-top: 50px;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    transition: ease-in .4s;
 }
 ```
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+document.querySelector('.cvv-input').onmouseenter = () => {
+  document.querySelector('.card-front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+  document.querySelector('.card-back').style.transform = 'perspective(1000px) rotateY(0deg)';
+};
+document.querySelector('.cvv-input').onmouseleave = () => {
+  document.querySelector('.card-front').style.transform = 'perspective(1000px) rotateY(0deg)';
+  document.querySelector('.card-back').style.transform = 'perspective(1000px) rotateY(180deg)';
+};
+document.querySelector('.cvv-input').oninput = () => document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
+I intend to start using CSS preprocessors such as SASS/SCSS to clean up my code and JavaScript to keep certain items selected when the page is changed. I also plan on using custom properties to avoid repetition throughout my stylesheet
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
+- [Article Piece](https://alvaromontoro.com/blog/68002/creating-a-firework-effect-with-css) - This is a wonderful article helped me add the fireworks display to the modal page that appears after the form is filled.
+- [YouTube Tutorial](https://www.youtube.com/watch?v=G7_VTWnWz40) - This is the awesome tutorial created by Mr. Web Designer that 'lent' me the code for the interactive form I created.
 
 ## Author
 
 - Frontend Mentor - [@Motlakz](https://www.frontendmentor.io/profile/Motlakz)
 - Twitter - [@MotlalepulaSel6](https://www.twitter.com/MotlalepulaSel6)
-

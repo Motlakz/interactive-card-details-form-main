@@ -6,7 +6,9 @@
     margin: 0 auto;
     padding: 0;
 }
-
+body {
+    overflow-x: hidden;
+}
 .container header {
     background: url("./assets/bg-main-desktop.png");
     background-size: cover;
@@ -180,7 +182,9 @@ a .button:hover {
     border: 2px solid greenyellow;
     background-color: rgb(48, 10, 30);
 }
-
+#modal-container {
+    overflow-y: hidden;
+}
 #modal {
     margin-top: 20px;
     text-align: center;
@@ -194,6 +198,16 @@ a .button:hover {
 #modal .button {
     max-width: min(70%, 400px);
 }
+
+.footer {
+    background: rgb(115, 107, 122);   
+    text-align: center;
+}
+.footer p {
+    color: #fff;
+    font-size: 16px;
+}
+
 button {
     font-family: monospace;
 }
@@ -236,16 +250,17 @@ button {
         background-size: cover;
         height: 100vh;
         margin: 0;
-        width: 40vw;
     }
     .container .card-container .card-front,
     .container .card-container .card-back {
         position: relative;
-        left: 15em;
+        left: 6em;
         top: 3em;
+
     }
     form {
         box-shadow: none;
+        flex: 1;
     }
     #modal {
         position: relative;
