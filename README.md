@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot of the Credit Checkout Form](https://imgur.com/a/0MnRYhq)
+![Screenshot of the Credit Checkout Form]("./https://imgur.com/a/0MnRYhq")
 
 ### Links
 
