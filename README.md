@@ -54,7 +54,7 @@ Users should be able to:
 - How to create a vanishing view of one side of a card.
 - How to reveal form inputs on the card as you type them in.
 
-To see how you can add code snippets, see below:
+Lines of code that I'm most proud of:
 
 ```html
 <div class="icons">
